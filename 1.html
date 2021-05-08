@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tag Input Type=file HTML</title>
+</head>
+
+<body>
+
+    <h4>Tag Input File</h4>
+    <form name="nama_form" enctype="multipart/form-data" action="proses.php" method="POST">
+        Name: <input type="text" name="name" />
+        <br />
+        Upload file: <input type="file" name="fileToUpload"/>
+        <br />
+        <button type="submit">Save</button>
+
+    </form>
+</body>
+
+</html>
+
+<!-- this proses.php -->
+<!-- 
+<?php
+	$host="localhost";
+	$username="root";
+	$password="";
+	$databasename="your_database";
+	$link=mysqli_connect($host,$username,$password,$databasename);
+	if (!$link) {
+		return die("Gagal".mysqli_connect_error());
+	}
+$name = $_POST['name'];
+$file = $_FILES['fileToUpload']['name'];
+$file_tmp = $_FILES['fileToUpload']['tmp_name'];
+
+move_uploaded_file($file_tmp, 'upload/'.$file);
+$query = mysqli_query ($link,"INSERT INTO your_table VALUES('','$name', '$file')");
+mysqli_close($link);
+?>
+
+ -->
